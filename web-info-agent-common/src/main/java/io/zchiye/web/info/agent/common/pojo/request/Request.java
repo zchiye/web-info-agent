@@ -3,7 +3,7 @@ package io.zchiye.web.info.agent.common.pojo.request;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.zchiye.web.info.agent.common.log.LogDataBO;
 import io.zchiye.web.info.agent.common.log.LogLevel;
-import io.zchiye.web.info.agent.common.log.Loggable;
+import io.zchiye.web.info.agent.common.log.PutLoggable;
 import io.zchiye.web.info.agent.common.utils.JsonUtils;
 import lombok.Getter;
 
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 @Getter
-public class Request implements Serializable, Loggable {
+public class Request implements Serializable, PutLoggable {
 
     private final long clientTimeMs = System.currentTimeMillis();
 

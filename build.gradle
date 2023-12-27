@@ -89,8 +89,10 @@ project(":web-info-agent-service") {
 
 project(":web-info-agent-api") {
     dependencies {
-        implementation project(":web-info-agent-service")
+        compileOnly project(":web-info-agent-contract")
+        compileOnly project(":web-info-agent-domain")
         implementation project(":web-info-agent-common")
+        implementation project(":web-info-agent-service")
 
         implementation 'org.springframework.boot:spring-boot-starter-web'
     }

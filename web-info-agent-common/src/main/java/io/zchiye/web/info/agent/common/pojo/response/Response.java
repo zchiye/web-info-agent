@@ -23,16 +23,6 @@ public class Response<T> implements Serializable, Loggable {
     }
 
     @Override
-    public void putLog(String logMsg, LogLevel logLevel) {
-
-    }
-
-    @Override
-    public void putLog(String logKey, Object logValue, LogLevel logLevel) {
-
-    }
-
-    @Override
     public List<String> getLog(LogLevel logLevel) {
         return List.of(
                 "【RESPONSE】",

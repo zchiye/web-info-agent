@@ -17,16 +17,6 @@ public class LogHttpServletRequest implements Loggable {
     public LogHttpServletRequest(HttpServletRequest httpServletRequest) {
         this.httpServletRequest = httpServletRequest;
     }
-    
-    @Override
-    public void putLog(String logMsg, LogLevel logLevel) {
-        
-    }
-
-    @Override
-    public void putLog(String logKey, Object logValue, LogLevel logLevel) {
-
-    }
 
     @Override
     public List<String> getLog(LogLevel logLevel) {
