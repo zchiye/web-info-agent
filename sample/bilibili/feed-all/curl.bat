@@ -1,0 +1,15 @@
+curl "https://api.bilibili.com/x/polymer/web-dynamic/v1/feed/all?timezone_offset=-480&type=all&platform=web&page=1&features=itemOpusStyle,listOnlyfans,opusBigCover,onlyfansVote&web_location=333.1365" ^
+  -H "authority: api.bilibili.com" ^
+  -H "accept: */*" ^
+  -H "accept-language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,zh-TW;q=0.5" ^
+  -H "cookie: buvid4=E384AF76-6836-B816-4876-FF16F259C35348698-023041422-kji2bknSwKf7CmryI^%^2FdvgT^%^2BW4yvjUqo6pP8J35VgiePstHbOVQEXYQ^%^3D^%^3D; buvid3=570F4A0B-54CB-D150-A6BD-B3DCBFE2F5D361649infoc; b_nut=1683731960; _uuid=497A7132-521010-7859-352A-324110EDFE1010686890infoc; i-wanna-go-back=-1; b_ut=5; nostalgia_conf=-1; CURRENT_PID=2bee2550-ef46-11ed-94af-196ef92259fd; rpdid=0zbfAHGFAJ^|19fbHRm67^|46^|3w1PWLC4; blackside_state=1; LIVE_BUVID=AUTO2116845804306081; buvid_fp_plain=undefined; DedeUserID=3590715; DedeUserID__ckMd5=bed6b4de0a44a3ca; CURRENT_BLACKGAP=0; hit-new-style-dyn=1; hit-dyn-v2=1; FEED_LIVE_VERSION=V8; enable_web_push=DISABLE; header_theme_version=CLOSE; is-2022-channel=1; CURRENT_QUALITY=112; fingerprint=f6035836811df72a223b8e2b8dba50f7; PVID=2; CURRENT_FNVAL=4048; bili_ticket=eyJhbGciOiJIUzI1NiIsImtpZCI6InMwMyIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDM2MDM2MTgsImlhdCI6MTcwMzM0NDM1OCwicGx0IjotMX0.gbaj4JXLfEmtsSZxUY0vR74E-J9OI8EkL_GFebkiYF8; bili_ticket_expires=1703603558; SESSDATA=6a443747^%^2C1718902660^%^2Ce591e^%^2Ac1CjDZq1PIQnXAlrtSg0q6Va08ypWPvaCTuLhwRbgtpIUQyaAXNoHOPqRUv6pnlymeysMSVnpubk5aTktwWlZRMjdub1hsZ0RYMGpoYjBtVHRsRFBMZGttLVBWV1U1eXRVbURjOUg2SEtfYjJBWDJ2U2VvOVBDOHVwb0JHU3UtbGd5VUNwWkNOOXRBIIEC; bili_jct=faa174a74820dbf26a88ea2d89125035; sid=7yk85td3; home_feed_column=5; bp_video_offset_3590715=878734670820278278; b_lsid=8D4A4B8C_18CA17344F7; browser_resolution=1812-905; buvid_fp=f6035836811df72a223b8e2b8dba50f7" ^
+  -H "origin: https://t.bilibili.com" ^
+  -H "referer: https://t.bilibili.com/?spm_id_from=333.1007.0.0" ^
+  -H "sec-ch-ua: ^\^"Not_A Brand^\^";v=^\^"8^\^", ^\^"Chromium^\^";v=^\^"120^\^", ^\^"Microsoft Edge^\^";v=^\^"120^\^"" ^
+  -H "sec-ch-ua-mobile: ?0" ^
+  -H "sec-ch-ua-platform: ^\^"Windows^\^"" ^
+  -H "sec-fetch-dest: empty" ^
+  -H "sec-fetch-mode: cors" ^
+  -H "sec-fetch-site: same-site" ^
+  -H "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" ^
+  --compressed

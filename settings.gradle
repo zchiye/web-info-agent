@@ -1,0 +1,8 @@
+rootProject.name = 'web-info-agent'
+include 'web-info-agent-api'
+include 'web-info-agent-cmd'
+include 'web-info-agent-domain'
+include 'web-info-agent-repository'
+include 'web-info-agent-service'
+include 'web-info-agent-common'
+include 'web-info-agent-contract'

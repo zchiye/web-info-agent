@@ -1,0 +1,19 @@
+{
+    "testInt": 0,
+    "testInteger": null,
+    "testString": "todo 草，为啥没出日志",
+    "testStringList": [
+        "https://i0.hdslb.com/bfs/archive/1125b5a0bd467b236d3ef0028862ca131edbf421.jpg",
+        "https://i0.hdslb.com/bfs/archive/1125b5a0bd467b236d3ef0028862ca131edbf421.jpg"
+    ],
+    "testObjectMap": {
+        "1": {
+            "testDouble": 1.1,
+            "testFloat": 0.0
+        },
+        "2": {
+            "testDouble": 2.0,
+            "testFloat": -0.02
+        }
+    }
+}

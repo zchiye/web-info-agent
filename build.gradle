@@ -1,0 +1,140 @@
+plugins {
+    id 'java'
+    id 'base'
+    id 'maven-publish'
+    id 'org.springframework.boot' version '3.2.0'
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+allprojects {
+    group = 'io.zchiye'
+    version = '0.0.1-SNAPSHOT'
+
+    // 配置字符编码
+    tasks.withType(JavaCompile).configureEach {
+        options.encoding = 'UTF-8'
+    }
+
+    java {
+        sourceCompatibility = '17'
+        targetCompatibility = '17'
+    }
+
+    repositories {
+        mavenLocal()
+        maven {
+            url 'https://maven.aliyun.com/repository/central'
+        }
+        mavenCentral()
+    }
+
+    sourceSets {
+        main {
+            java {
+                resources {
+
+                }
+            }
+        }
+        test {
+            java {
+                resources {
+
+                }
+            }
+        }
+    }
+
+    configurations {
+
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter:3.2.0'
+
+        implementation 'org.apache.commons:commons-lang3:3.14.0'
+        implementation 'org.apache.commons:commons-collections4:4.4'
+        implementation 'com.google.guava:guava:32.1.3-jre'
+        implementation 'jakarta.annotation:jakarta.annotation-api:3.0.0-M1'
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+        implementation 'org.apache.logging.log4j:log4j-core:3.0.0-alpha1'
+        implementation 'org.apache.logging.log4j:log4j-api:3.0.0-alpha1'
+        implementation 'org.apache.logging.log4j:log4j-slf4j-impl:3.0.0-alpha1'
+        implementation 'com.fasterxml.jackson.core:jackson-databind:2.16.0'
+        implementation 'com.fasterxml.jackson.core:jackson-core:2.16.0'
+        implementation 'com.fasterxml.jackson.core:jackson-annotations:2.16.0'
+        implementation 'org.aspectj:aspectjrt:1.9.21'
+        implementation 'org.aspectj:aspectjweaver:1.9.21'
+
+        developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.1'
+    }
+}
+
+project(":web-info-agent-service") {
+    dependencies {
+        implementation project(":web-info-agent-common")
+        implementation project(":web-info-agent-domain")
+    }
+}
+
+project(":web-info-agent-api") {
+    dependencies {
+        implementation project(":web-info-agent-service")
+        implementation project(":web-info-agent-common")
+
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+    }
+}
+
+project(":web-info-agent-cmd") {
+    dependencies {
+        implementation project(":web-info-agent-service")
+    }
+}
+
+project(":web-info-agent-repository") {
+    dependencies {
+        implementation project(":web-info-agent-domain")
+
+        implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+        implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+        implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+        runtimeOnly 'com.mysql:mysql-connector-j'
+        implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
+        testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.3'
+    }
+}
+
+project(":web-info-agent-domain") {
+    dependencies {
+        implementation project(":web-info-agent-common")
+    }
+}
+
+project(":web-info-agent-common") {
+    dependencies {
+
+        implementation 'commons-io:commons-io:2.15.0'
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+    }
+}
+
+project(":web-info-agent-contract") {
+    dependencies {
+        compileOnly project(":web-info-agent-common")
+    }
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
