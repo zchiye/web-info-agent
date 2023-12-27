@@ -14,6 +14,8 @@ public class CreationDTO implements Serializable {
 
     private List<String> richTexts;
 
+    private String previewImgUrl;
+
     private Long createTimestamp;
 
     private String createDate;
