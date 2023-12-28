@@ -1,9 +1,6 @@
 package io.zchiye.web.info.agent.contract.result;
 
-import io.zchiye.web.info.agent.contract.dto.InteractionDTO;
-import io.zchiye.web.info.agent.contract.dto.ParticipantDTO;
-import io.zchiye.web.info.agent.contract.dto.CreationDTO;
-import io.zchiye.web.info.agent.contract.dto.ResourceDTO;
+import io.zchiye.web.info.agent.contract.dto.*;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -19,5 +16,7 @@ public class ExtractAbstractResult implements Serializable {
     private List<ParticipantDTO> participantDTOList;
 
     private InteractionDTO interactionDTO;
+
+    private List<TagDTO> tagDTOList;
 
 }

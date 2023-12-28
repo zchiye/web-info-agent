@@ -10,8 +10,8 @@ import java.util.Map;
 @Data
 public class ExtractAbstractRequest extends Request {
 
-    private String url;
+    private String pageUrl;
 
-    private Map<String, String> headers;
+    private Map<String, String> pageHeaders;
 
 }

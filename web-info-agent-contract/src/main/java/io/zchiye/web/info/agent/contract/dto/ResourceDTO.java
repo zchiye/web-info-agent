@@ -7,9 +7,11 @@ import java.io.Serializable;
 @Data
 public class ResourceDTO implements Serializable {
 
+    private String resourceId;
+
     private String resourceUrl;
 
-    private Integer resourceType;
+    private String resourceType;
 
     private String resourceContent;
 

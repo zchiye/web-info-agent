@@ -19,6 +19,6 @@ public class ParticipantDTO implements Serializable {
 
     private String platformFollowerCount;
 
-    private String avatarUrl;
+    private String platformAvatarUrl;
 
 }
